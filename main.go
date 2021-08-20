@@ -7,6 +7,7 @@ import (
 )
 
 func main() {
+	fmt.Println("It's okay")
 	pkg.Application{
 		Name:   "some name",
 		Output: os.Stdout,
