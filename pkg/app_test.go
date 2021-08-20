@@ -10,8 +10,6 @@ import (
 )
 
 var _ = Describe("App", func() {
-	Expect(true)
-
 	var (
 		stdout  io.Writer
 		subject pkg.Application
