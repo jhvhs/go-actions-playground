@@ -1,6 +1,8 @@
 package pkg_test
 
 import (
+	"io"
+
 	"github.com/jhvhs/go-actions-playground/pkg"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -11,12 +13,12 @@ var _ = Describe("App", func() {
 	Expect(true)
 
 	var (
-		stdout  *gbytes.Buffer
+		stdout  io.Writer
 		subject pkg.Application
 	)
 
 	BeforeEach(func() {
-		stdout = &gbytes.Buffer{}
+		stdout = gbytes.NewBuffer()
 		subject = pkg.Application{
 			Name:   "John",
 			Output: stdout,
