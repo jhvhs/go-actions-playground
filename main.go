@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"os"
+
+	"github.com/jhvhs/go-actions-playground/pkg"
+)
 
 func main() {
-	fmt.Println("Oh my God! It works...")
+	pkg.Application{
+		Name:   "some name",
+		Output: os.Stdout,
+	}.Run()
 }
