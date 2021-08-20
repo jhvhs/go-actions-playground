@@ -11,7 +11,7 @@ var _ = Describe("App", func() {
 	Expect(true)
 
 	var (
-		stdout  *gbytes.Buffer
+		stdout  gbytes.NewBuffer()
 		subject pkg.Application
 	)
 
