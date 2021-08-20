@@ -4,7 +4,7 @@ GOPATH=$(shell pwd)/vendor:$(shell pwd)
 all: test
 
 install_prep:
-	go mod vendor
+	GOPATH=$(GOPATH) GOBIN=$(GOBIN) go mod vendor
 
 install_ginkgo: install_prep
 	GOPATH=$(GOPATH) GOBIN=$(GOBIN) go get github.com/onsi/ginkgo/ginkgo
